@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>howOldAreYou</title>
+</head>
+
+<body>
+    <script>
+        function howOldAreYou(year, month, date, hours, minutes) {
+            let birth_input = new Date(year, month - 1, date, hours, minutes);
+            let right_now = new Date();
+            let age_in_ms = right_now.getTime() - birth_input.getTime();
+            let age_in_years = Math.floor(age_in_ms / 1000 / 60 / 60 / 24 / 365);
+            alert(`你現在是 ${age_in_years} 歲！`);;
+        }
+
+        let year = parseInt(prompt("請輸入出生年份："));
+        let month = parseInt(prompt("請輸入出生月份："));
+        let date = parseInt(prompt("請輸入出生日期："));
+        let hours = parseInt(prompt("請輸入出生小時 (24小時制)："));
+        let minutes = parseInt(prompt("請輸入出生分鐘："));
+
+        howOldAreYou(year, month, date, hours, minutes);
+    </script>
+</body>
+
+</html>
