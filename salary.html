@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let work_hours = parseFloat(prompt("工作時數："));
+        let pay = 0;
+
+        if (work_hours <= 60) {
+            pay = work_hours * 120;
+        }
+        else if (work_hours <= 80) {
+            pay = 60 * 120 + (work_hours - 60) * 120 * 1.25;
+        }
+        else {
+            pay = 60 * 120 + 20 * 120 * 1.25 + (work_hours - 80) * 120 * 1.5;
+        }
+        console.log("薪資為:" + pay + "元");
+    </script>
+</body>
+
+</html>
