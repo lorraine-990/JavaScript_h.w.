@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num_input = parseInt(prompt('請輸入一正整數'));
+        let facter = [];
+        for (let i = 1; i <= num_input; i++) {
+            if (num_input % i === 0) {
+                facter.push(i);
+            }
+        }
+        document.write(`${num_input}的因數為${facter.join(', ')}`);
+    </script>
+</body>
+
+</html>
